@@ -57,37 +57,51 @@ class SignupForm extends React.Component {
     render() {
         return (
             <div className="signup-form-container">
-                <form onSubmit={this.handleSubmit}>
-                    <div className="signup-form">
-                        <br />
+                <div style={{ marginRight: 'auto', marginTop: '100px', marginLeft: 'auto', width: '650px', height: '505px', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '500', borderRadius: '24px', backgroundColor: "rgb(74,199,118)" }}>
+                    <form onSubmit={this.handleSubmit} style={{ margin: 'auto' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                            <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600' }}>Email</span>
+                    
+                     
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
-                            placeholder="Email"
+                                style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginTop: '20px', border: 'none', padding: '5px', fontFamily: 'sans-serif' }}
+                           
                         />
-                        <br />
+
+                        <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginTop: '20px' }}>Handle</span>
+                  
                         <input type="text"
                             value={this.state.handle}
                             onChange={this.update('handle')}
-                            placeholder="Handle"
+                          
+                            style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginTop: '20px', border: 'none', padding: '5px', fontFamily: 'sans-serif' }}
                         />
-                        <br />
+                  
+                            <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginTop: '20px' }}>Password</span>
+
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
-                            placeholder="Password"
+                                style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginTop: '20px', justifyContent: 'center', marginTop: '20px', border: 'none', padding: '5px' }}
                         />
-                        <br />
+
+                            <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginTop: '20px' }}>Confirm Password</span>
+                  
                         <input type="password"
                             value={this.state.password2}
                             onChange={this.update('password2')}
-                            placeholder="Confirm Password"
+                                style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginTop: '20px', justifyContent: 'center', marginTop: '20px', border: 'none', padding: '5px' }}
+                            
                         />
-                        <br />
-                        <input type="submit" value="Submit" />
-                        {this.renderErrors()}
-                    </div>
+                  
+                            <input type="submit" value="Submit" style={{ width: '25%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginBottom: '40px', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '5px', cursor: 'pointer' }}/>
+                        {/* {this.renderErrors()} */}
+          
+                        </div>
                 </form>
+                </div>
             </div>
         );
     }
