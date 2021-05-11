@@ -33,7 +33,7 @@ class NavBar extends React.Component {
 
                     {/* <Link to={'/home'}>All Homes</Link> */}
                    
-                    <button onClick={this.logoutUser} style={{ background: "none", border: "none", cursor: "pointer" }}>Logout</button>
+                    <button onClick={this.logoutUser} style={{ background: "none", border: "1.5px solid black", borderRadius: "12px", fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '500', cursor: "pointer", padding: '5px' }}>Logout</button>
                 </div>
             );
         } else {
@@ -60,13 +60,13 @@ class NavBar extends React.Component {
                 </button>
 
                 <div style={{ display: 'flex', flex:"1", justifyContent:'space-evenly', alignItems:'center'}}>
-                    <a href="https://www.freecodecamp.org/" target="_blank" style={{ textDecoration: 'none', backgroundColor:'none', color:'black'}}>
+                    <a href="https://www.linkedin.com/in/solomon-bassalian-software-engineer/" target="_blank" style={{ textDecoration: 'none', backgroundColor:'none', color:'black'}}>
                         <span style={{ fontFamily: 'sans-serif',  fontSize: '16px', fontWeight: '500' }}>Linkedin</span>
                     </a>
-                    <a href="https://www.freecodecamp.org/" target="_blank" style={{ textDecoration: 'none', backgroundColor: 'none', color: 'black' }}>
+                    <a href="https://angel.co/u/solomon-bassalian" target="_blank" style={{ textDecoration: 'none', backgroundColor: 'none', color: 'black' }}>
                         <span style={{ fontFamily: 'sans-serif', fontSize: '16px', fontWeight: '500' }}>AngelList</span>
                     </a>
-                    <a href="https://www.freecodecamp.org/" target="_blank" style={{ textDecoration: 'none', backgroundColor: 'none', color: 'black' }}>
+                    <a href="https://github.com/sbassalian" target="_blank" style={{ textDecoration: 'none', backgroundColor: 'none', color: 'black' }}>
                         <span style={{ fontFamily: 'sans-serif', fontSize: '16px', fontWeight: '500' }}>Github</span>
                     </a>
             
