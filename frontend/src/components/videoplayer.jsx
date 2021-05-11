@@ -7,24 +7,31 @@ const VideoPlayer = () => {
 
 
     return (
-        <div>
+        <div >
 
+            <h1>Copy your personal id and send it out to a friend to chat!</h1>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+
+           
             {stream && (
-                <div>
-                    <h1>{call.name || 'Look at that beautiful face!'}</h1>
-                    <video playsInline muted ref={myVideo} autoPlay />
+                <div style={{width:'50%'}}>
+                        <span style={{ fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', color:'white', width:'fit-content', marginLeft:'auto', marginRight:'auto'}}>{call.name || ''}</span>
+                    <video playsInline muted ref={myVideo} autoPlay style={{width:'100%', border: "1px solid black", borderRadius: "24px", marginRight:'10px' }}/>
                 </div>
 
             )}
             {callAccepted && !callEnded && (
-                <div>
+                <div style= {{width:'50%'}}>
 
-                    <h1>{call.name || 'Look at that beautiful face!'}</h1>
+                        <span style={{
+                            fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', color: 'white', width: 'fit-content', marginLeft: 'auto', marginRight:'auto' }}>{call.name || ''}</span>
 
-                    <video playsInline ref={userVideo} autoPlay />
+                        <video playsInline ref={userVideo} autoPlay style={{ width: '100%', border: "1px solid black", borderRadius: "24px", marginLeft: '10px' }}/>
                 </div>
 
             )};
+
+             </div>
         </div>
     )
 };
