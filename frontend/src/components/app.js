@@ -8,6 +8,8 @@ import MainPageContainer from './main/main_page_container'
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Home from './home/home_page';
+const path = require('path');
+
 
 // // import videoplayer from './videoplayer';
 // // import notifications from './notifications';
