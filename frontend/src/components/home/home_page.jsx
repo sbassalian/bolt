@@ -12,7 +12,9 @@ const HomePage = () => {
 
             <div style={{ display: 'flex', flexDirection:'column', justifyContent:'center' }}>
 
-                     <h1 style={{  display: 'flex', justifyContent: 'center', color:"white", fontFamily:"sans-serif" }}>{call.name || 'Look at that beautiful face!'}</h1>
+                     {/* <h1 style={{  display: 'flex', justifyContent: 'center', color:"white", fontFamily:"sans-serif" }}>{call.name || 'Look at that beautiful face!'}</h1> */}
+
+                     
 
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <video style={{width:'0px', border:"1px solid black", borderRadius:"24px"} }playsInline muted ref={myVideo} autoPlay />  
