@@ -15,24 +15,31 @@ const ContextProvider = ({ children }) => {
     const [call, setCall] = useState({});
     const [me, setMe] = useState('');
 
-    const myVideo = useRef();
+    // const myVideo = useRef();
+    const [myVideo, setMyVideo] = useState()
     const userVideo = useRef();
     const connectionRef = useRef();
 
     useEffect(() => {
-        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-            .then((currentStream) => {
-                setStream(currentStream);
-
-                myVideo.current.srcObject = currentStream;
-            });
-
         socket.on('me', (id) => setMe(id));
-
+        
         socket.on('callUser', ({ from, name: callerName, signal }) => {
             setCall({ isReceivingCall: true, from, name: callerName, signal });
         });
     }, []);
+    
+    useEffect(()=>{
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            .then((currentStream) => {
+                setStream(currentStream);
+    
+                debugger
+    
+                myVideo && (myVideo.srcObject = currentStream);
+            });
+        
+
+    }, [myVideo])
 
     const answerCall = () => {
         setCallAccepted(true);
@@ -53,6 +60,8 @@ const ContextProvider = ({ children }) => {
     };
 
     const callUser = (id) => {
+        
+
         const peer = new Peer({ initiator: true, trickle: false, stream });
 
         peer.on('signal', (data) => {
@@ -85,6 +94,7 @@ const ContextProvider = ({ children }) => {
             call,
             callAccepted,
             myVideo,
+            setMyVideo,
             userVideo,
             stream,
             name,

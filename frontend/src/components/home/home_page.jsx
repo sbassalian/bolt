@@ -16,9 +16,10 @@ const HomePage = () => {
 
                      
 
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <video style={{width:'0px', border:"1px solid black", borderRadius:"24px"} }playsInline muted ref={myVideo} autoPlay />  
-                    </div>
+                    </div> */}
+                    <h1>Hi!</h1>
 
 
             </div>

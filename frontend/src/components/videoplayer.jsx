@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { SocketContext } from '../Context';
 
 const VideoPlayer = (handle) => {
-    const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
+    const { name, callAccepted, myVideo, userVideo, callEnded, stream, call, setMyVideo } = useContext(SocketContext);
 
     console.log(handle)
     return (
@@ -15,7 +15,10 @@ const VideoPlayer = (handle) => {
             {stream && (
                 <div style={{width:'50%', display:'flex', justifyContent:'center', flexDirection:'column'}}>
                         <span style={{ fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', color:'dodgerblue', width:'fit-content', marginLeft:'auto', marginRight:'auto'}}>{handle.handle || ''}</span>
-                    <video playsInline muted ref={myVideo} autoPlay style={{width:'100%', border: "1px solid black", borderRadius: "24px", marginRight:'10px' }}/>
+                    <video playsInline muted ref={(video)=>(
+                        setMyVideo(video)
+                    )} 
+                    autoPlay style={{width:'100%', border: "1px solid black", borderRadius: "24px", marginRight:'10px' }}/>
                 </div>
 
             )}
