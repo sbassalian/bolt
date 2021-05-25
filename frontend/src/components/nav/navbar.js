@@ -55,7 +55,7 @@ class NavBar extends React.Component {
         return (
             <div style={{backgroundColor: "rgb(74,199,118)", display: 'flex', borderRadius:"24px", marginTop:"20px", alignItems:"center", height:'75px', width:'1000px', marginLeft:'auto', marginRight:'auto'}}>
                 <button onClick={()=>this.forward('/home')}style={{display: 'flex', width:"80", marginLeft:"20px",alignItems:"center", background:"none", border:"none", cursor:"pointer"}}>
-                    <span style={{ fontFamily: 'sans-serif',  fontSize: '24px', fontWeight: '500' }}>FaceChatter</span>
+                    <span style={{ fontFamily: 'sans-serif',  fontSize: '24px', fontWeight: '500' }}>Bolt</span>
                     <img src="https://lh3.googleusercontent.com/2HZKv8L5B5pUD2MqjAdcmaPH6RVTH-vLd_sS109YhO2o_MQiL5hsQHZ5oFmJeVuNHYe7CNZPSCOitTP7iteo6-yGZlUGGJHQ5kWWALDfUKcochVoALX-0gjFfxLUo02LDyLIhEYK=w2400?source=screenshot.guru" style={{ height:"50px", width:"50px"}}></img>
                 </button>
 
