@@ -14,10 +14,11 @@ class MainPage extends React.Component {
                 <div style={{display:'flex', justifyContent:'center', marginTop:'20px', marginBottom:'20px'}}>
                     <span style={{ color: 'white', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', width: 'fit-content', }}>Copy your personal id and send it out to a friend to chat!</span>
                 </div>
+                <Notifications handle={this.props.state.session.user.handle} />
 
                 <VideoPlayer handle={this.props.state.session.user.handle} />
                 <Functionality>
-                    <Notifications handle={this.props.state.session.user.handle}/>
+                    {/* <Notifications handle={this.props.state.session.user.handle}/> */}
                 </Functionality>
             </div>
 

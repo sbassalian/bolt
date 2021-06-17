@@ -33,7 +33,7 @@ const ContextProvider = ({ children }) => {
             .then((currentStream) => {
                 setStream(currentStream);
     
-                debugger
+             
     
                 myVideo && (myVideo.srcObject = currentStream);
             });

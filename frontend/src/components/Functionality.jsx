@@ -21,9 +21,9 @@ const Functionality = ({ children }) => {
 
     return (
         <div style={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
-            <span style={{ color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginLeft: 'auto', marginRight: 'auto', marginTop:'30px' }} >Make a Call</span>
+            <span style={{ color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginLeft: 'auto', marginRight: 'auto', marginTop:'10px' }} >Make a Call</span>
 
-            <form noValidate autoComplete="off" style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'center', marginTop: '30px'}}>
+            <form noValidate autoComplete="off" style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
                 {/* <span>Account Info</span>
                 <input type="text" label="Name" value={name} onChange={(e) => setName(e.target.value)} /> */}
 
@@ -47,7 +47,7 @@ const Functionality = ({ children }) => {
                             )}
             </form>
                 <CopyToClipboard text={me}>
-                    <button style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto', color: 'black', backgroundColor: 'rgb(74,199,118)', borderRadius: '12px', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '10px', cursor: 'pointer' }}>Copy your ID</button>
+                    <button style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto', color: 'black', backgroundColor: 'rgb(74,199,118)', borderRadius: '12px', marginTop: '15px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '10px', cursor: 'pointer' }}>Copy your ID</button>
                 </CopyToClipboard>
             {children}
         </div>

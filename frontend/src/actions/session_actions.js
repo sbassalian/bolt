@@ -6,6 +6,8 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
 export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
+export const CLEAR_SESSION_ERRORS = 'CLEAR_SESSION_ERRORS';
+
 
 // We'll dispatch this when our user signs in
 export const receiveCurrentUser = currentUser => ({
@@ -22,6 +24,10 @@ export const receiveUserSignIn = () => ({
 export const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
+});
+
+export const clearSessionErrors = () => ({
+    type: CLEAR_SESSION_ERRORS,
 });
 
 // When our user is logged out, we will dispatch this action to set isAuthenticated to false

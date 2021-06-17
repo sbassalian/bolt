@@ -24,6 +24,10 @@ class SignupForm extends React.Component {
         this.setState({ errors: nextProps.errors })
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -43,6 +47,7 @@ class SignupForm extends React.Component {
     }
 
     renderErrors() {
+        this.props.errors ? console.log(this.props.errors) : console.log("no")
         return (
             <ul>
                 {Object.keys(this.state.errors).map((error, i) => (
@@ -54,15 +59,51 @@ class SignupForm extends React.Component {
         );
     }
 
+    renderEmailError() {
+
+        return (
+            <span key={`error-email-2`} style={{ marginLeft: 'auto', marginRight: 'auto', color: 'blue', marginTop: '10px', fontFamily: 'sans-serif', fontSize: '14px', fontWeight: '400' }}>
+                {this.props.errors['email']}
+            </span>
+        );
+    }
+
+    renderHandleError() {
+
+        return (
+            <span key={`error-email-2`} style={{ marginLeft: 'auto', marginRight: 'auto', color: 'blue', marginTop: '10px', fontFamily: 'sans-serif', fontSize: '14px', fontWeight: '400' }}>
+                {this.props.errors['handle']}
+            </span>
+        );
+    }
+
+    renderPasswordError() {
+
+        return (
+            <span key={`error-password-2`} style={{ marginLeft: 'auto', marginRight: 'auto', color: 'blue', marginTop: '10px', fontFamily: 'sans-serif', fontSize: '14px', fontWeight: '400' }}>
+                {this.props.errors['password']}
+            </span>
+        );
+    }
+
+    renderPassword2Error() {
+
+        return (
+            <span key={`error-password-2`} style={{ marginLeft: 'auto', marginRight: 'auto', color: 'blue', marginTop: '10px', fontFamily: 'sans-serif', fontSize: '14px', fontWeight: '400' }}>
+                {this.props.errors['password2']}
+            </span>
+        );
+    }
+
     render() {
         return (
             <div className="signup-form-container">
-                <div style={{ marginRight: 'auto', marginTop: '100px', marginLeft: 'auto', width: '650px', height: '505px', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '500', borderRadius: '24px', backgroundColor: "rgb(74,199,118)" }}>
+                <div style={{ marginRight: 'auto', marginTop: '50px', marginLeft: 'auto', width: '650px', height: '600px', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '500', borderRadius: '24px', backgroundColor: "rgb(74,199,118)" }}>
                     <form onSubmit={this.handleSubmit} style={{ margin: 'auto' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                             <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600' }}>Email</span>
                     
-                     
+                            {this.renderEmailError()}
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
@@ -71,7 +112,7 @@ class SignupForm extends React.Component {
                         />
 
                         <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginTop: '20px' }}>Handle</span>
-                  
+                            {this.renderHandleError()}
                         <input type="text"
                             value={this.state.handle}
                             onChange={this.update('handle')}
@@ -80,7 +121,7 @@ class SignupForm extends React.Component {
                         />
                   
                             <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginTop: '20px' }}>Password</span>
-
+                            {this.renderPasswordError()}
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
@@ -88,7 +129,7 @@ class SignupForm extends React.Component {
                         />
 
                             <span style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginTop: '20px' }}>Confirm Password</span>
-                  
+                            {this.renderPassword2Error()}
                         <input type="password"
                             value={this.state.password2}
                             onChange={this.update('password2')}
@@ -97,6 +138,7 @@ class SignupForm extends React.Component {
                         />
                   
                             <input type="submit" value="Submit" style={{ width: '25%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginBottom: '40px', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '5px', cursor: 'pointer' }}/>
+
                         {/* {this.renderErrors()} */}
           
                         </div>
