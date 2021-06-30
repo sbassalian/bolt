@@ -5,7 +5,7 @@ import { SocketContext } from '../Context';
 const VideoPlayer = (handle) => {
     const { name, callAccepted, myVideo, userVideo, callEnded, stream, call, setMyVideo } = useContext(SocketContext);
 
-    console.log(handle)
+
     return (
         <div >
 

@@ -16,7 +16,7 @@ const Functionality = ({ children }) => {
     const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
     const [idToCall, setIdToCall] = useState('');
     
-    console.log(children);
+  
 
 
     return (
@@ -40,6 +40,7 @@ const Functionality = ({ children }) => {
                             ) : (
                         <button style={{ marginLeft: '10px', width: '200px',  color: 'black', backgroundColor: 'rgb(74,199,118)', borderRadius: '12px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '10px', cursor: 'pointer' }} onClick={(e) => {
                             e.preventDefault();
+
                             callUser(idToCall)}}>
                                     Call
                                 </button>

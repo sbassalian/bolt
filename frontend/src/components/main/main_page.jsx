@@ -17,7 +17,7 @@ class MainPage extends React.Component {
                 <Notifications handle={this.props.state.session.user.handle} />
 
                 <VideoPlayer handle={this.props.state.session.user.handle} />
-                <Functionality>
+                <Functionality >
                     {/* <Notifications handle={this.props.state.session.user.handle}/> */}
                 </Functionality>
             </div>
