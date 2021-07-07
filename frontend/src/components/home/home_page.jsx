@@ -3,6 +3,7 @@ import VideoPlayer from '../videoplayer';
 import Notifications from '../notifcations';
 
 import {SocketContext} from '../../Context'
+import './homepage.css'
 
 const HomePage = () => {
 
@@ -19,8 +20,11 @@ const HomePage = () => {
                     {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <video style={{width:'0px', border:"1px solid black", borderRadius:"24px"} }playsInline muted ref={myVideo} autoPlay />  
                     </div> */}
-                    <h1>Hi!</h1>
+            <span id="inst">Login, Copy your personal id and send it out to a friend, and Enjoy your call!</span>
 
+
+            <img src="https://sbassalian.github.io/solomonbassalian.github.io/images/bolt2.gif" alt="" id="hello" />
+     
 
             </div>
         );

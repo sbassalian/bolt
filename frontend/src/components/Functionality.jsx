@@ -12,7 +12,7 @@ class Helper extends React.Component{
 }
 
 
-const Functionality = ({ children }) => {
+const Functionality = (handle, { children }) => {
     const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
     const [idToCall, setIdToCall] = useState('');
     
@@ -24,6 +24,7 @@ const Functionality = ({ children }) => {
             <span style={{ color: 'white', marginTop: 'auto', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', marginLeft: 'auto', marginRight: 'auto', marginTop:'10px' }} >Make a Call</span>
 
             <form noValidate autoComplete="off" style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+
                 {/* <span>Account Info</span>
                 <input type="text" label="Name" value={name} onChange={(e) => setName(e.target.value)} /> */}
 
@@ -40,7 +41,7 @@ const Functionality = ({ children }) => {
                             ) : (
                         <button style={{ marginLeft: '10px', width: '200px',  color: 'black', backgroundColor: 'rgb(74,199,118)', borderRadius: '12px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '10px', cursor: 'pointer' }} onClick={(e) => {
                             e.preventDefault();
-
+                            setName(handle)    
                             callUser(idToCall)}}>
                                     Call
                                 </button>

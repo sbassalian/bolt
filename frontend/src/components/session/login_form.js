@@ -144,12 +144,12 @@ class LoginForm extends React.Component {
                                 style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginTop: '20px', justifyContent: 'center', marginTop: '20px', border: 'none', padding: '5px'  }}
                                 />
                             
-                            <button onClick={this.demoLogin} style={{ width: '35%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'rgb(74,199,118)', borderRadius: '12px', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '5px', cursor: 'pointer'  }}>
+              
+                            <input type="submit" value="Submit" style={{ width: '25%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px',  marginTop: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '5px', cursor:'pointer'  }}/>
+                       
+                            <button onClick={this.demoLogin} style={{ width: '35%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'rgb(74,199,118)', borderRadius: '12px', marginTop: '40px', marginBottom: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '5px', cursor: 'pointer'  }}>
                                 Demo User Login
                             </button>
-              
-                            <input type="submit" value="Submit" style={{ width: '25%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'black', color: 'white', borderRadius: '12px', marginBottom: '40px', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '18px', fontWeight: '600', border: 'none', padding: '5px', cursor:'pointer'  }}/>
-                       
                             {/* {this.renderErrors()} */}
                             
                             {/* <h1 style={{ marginLeft: 'auto', marginRight: 'auto', color: 'white', marginTop: '40px', fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600' }}>{this.state.errors.session ? this.state.errors.session.email : 'Hi'}</h1> */}

@@ -26,7 +26,7 @@ const VideoPlayer = (handle) => {
                     <div style={{ width: '50%', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
 
                         <span style={{
-                            fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', color: 'firebrick', width: 'fit-content', marginLeft: 'auto', marginRight:'auto' }}>{handle.handle || ''}</span>
+                            fontFamily: 'sans-serif', fontSize: '24px', fontWeight: '600', color: 'firebrick', width: 'fit-content', marginLeft: 'auto', marginRight:'auto' }}>{'My Friend' || ''}</span>
 
                         <video playsInline ref={userVideo} autoPlay style={{ width: '100%', border: "1px solid black", borderRadius: "24px", marginLeft: '10px' }}/>
                 </div>
